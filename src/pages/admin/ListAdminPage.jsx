@@ -1,9 +1,51 @@
 import React, { useState } from "react";
+import axios from "axios";
 import NavbarAdmin from "../../components/navbar_admin";
 import SidebarAdmin from "../../components/sidebar_admin";
 
 const ListAdminPage = () => {
   const [manage, setManage] = useState(false);
+  const [idOrder, setIdOrder] = useState(null);
+  const [dateTransaction, setDateTransaction] = useState(null);
+  const [idSupplier, setIdSupplier] = useState(null);
+  const [typeTransaction, setTypeTransaction] = useState(null);
+  const [suppliers, setSuppliers] = useState(null);
+
+  const addOrder = async () => {
+    const response = await axios.post("http://localhost:3001/api/v1/supplier", {
+      date_transaction: dateTransaction,
+      id_supplier: idSupplier,
+      type_transaction: typeTransaction,
+    });
+    if (response.status === 200) {
+      alert("Berhasil menambahkan data");
+      // getSuppliers();
+    } else alert("Gagal menambahkan data");
+  };
+
+  const updateOder = async (id) => {
+    const response = await axios.put(
+      `http://localhost:3001/api/v1/supplier/${id}`,
+      {
+        date_transaction: dateTransaction,
+        id_supplier: idSupplier,
+        type_transaction: typeTransaction,
+      }
+    );
+    if (response.status === 200) {
+      alert("Berhasil mengubah data");
+      // getSuppliers();
+    } else alert("Gagal mengubah data");
+  };
+
+  const closeManage = () => {
+    setIdOrder(null);
+    setDateTransaction(null);
+    setIdSupplier(null);
+    setTypeTransaction(null);
+    setSuppliers(null);
+    setManage(false);
+  };
 
   return (
     <>
@@ -98,12 +140,9 @@ const ListAdminPage = () => {
           <div className="flex">
             <ol className="list-reset flex">
               <li>
-                <a
-                  href="#"
-                  className="text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700"
-                >
+                <p className="text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700">
                   Dashboard
-                </a>
+                </p>
               </li>
               <li>
                 <span className="mx-2 text-neutral-500">{">"}</span>
