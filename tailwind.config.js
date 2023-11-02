@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/tw-elements-react/dist/js/**/*.js",
+  ],
   theme: {
     extend: {
       textColor: {
@@ -10,8 +14,9 @@ module.exports = {
         cream: "#FFF7B0",
         brown: "#564C1B",
         orange: "#FBC967",
+        purple: "#883DCF",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tw-elements-react/dist/plugin.cjs")],
 };
