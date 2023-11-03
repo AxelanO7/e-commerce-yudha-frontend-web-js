@@ -7,41 +7,30 @@ import logo from "../assets/images/logo.png";
 
 const NavbarCustomer = () => {
   return (
-    <nav class="flex items-center justify-between flex-wrap bg-brown px-6">
+    <nav class="flex items-center bg-brown px-12">
       <img src={logo} alt="logo" className="w-28	h-28" />
-      <div class="flex items-center flex-shrink-0 text-white mr-6">
+      <div class="flex items-center text-white ml-6">
         <span class="text-4xl font-extrabold text-[#EEC765]">
           UD TOKO YUDHA
         </span>
       </div>
-      <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-        <div class="text-xl font-semibold lg:flex-grow text-white">
-          <a
-            href="#responsive-header"
-            class="block mt-4 lg:inline-block lg:mt-0 hover:text-[#564C1B] mr-4"
-          >
+      <div class="flex grow" />
+      <div class="flex items-center">
+        <div class="text-xl font-semibold text-white space-x-8 mr-16">
+          <a href="#responsive-header" class="mt-4 hover:text-[#564C1B]">
             Home
           </a>
-          <a
-            href="#responsive-header"
-            class="block mt-4 lg:inline-block lg:mt-0 hover:text-[#564C1B] mr-4"
-          >
+          <a href="#responsive-header" class="mt-4 hover:text-[#564C1B]">
             All Product
           </a>
-          <a
-            href="#responsive-header"
-            class="block mt-4 lg:inline-block lg:mt-0 hover:text-[#564C1B] mr-4"
-          >
+          <a href="#responsive-header" class="mt-4  hover:text-[#564C1B]">
             Contact Us
           </a>
-          <a
-            href="#responsive-header"
-            class="block mt-4 lg:inline-block lg:mt-0 hover:text-[#564C1B]"
-          >
+          <a href="#responsive-header" class="mt-4  hover:text-[#564C1B]">
             Informasi
           </a>
         </div>
-        <div className="flex flex-col">
+        <div>
           <form>
             <label
               for="default-search"

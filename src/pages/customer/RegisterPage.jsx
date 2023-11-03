@@ -90,8 +90,7 @@ const RegisterPage = () => {
           />
           <div className="h-12" />
           <button
-            type="submit"
-            className="btn btn-primary btn_orange/50 w-40 py-1 w-2/4 mx-auto"
+            className="btn btn-primary bg-orange/50 w-40 py-1 w-2/4 mx-auto"
             onClick={tapRegister}
           >
             REGISTER

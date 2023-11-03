@@ -45,7 +45,6 @@ const LoginPage = () => {
           />
           <div className="h-8" />
           <button
-            type="submit"
             className="btn btn-primary bg-orange/50 w-40 py-1"
             onClick={tapLogin}
           >
