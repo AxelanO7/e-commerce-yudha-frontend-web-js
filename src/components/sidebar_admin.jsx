@@ -5,14 +5,12 @@ import icDataTransaction from "../assets/icons/ic_transaction.svg";
 import icReport from "../assets/icons/ic_report.svg";
 import { TECollapse } from "tw-elements-react";
 
-// todo : make space for accordion
-
 export default function SidebarAdmin() {
   const [dataMaster, setDataMaster] = useState(false);
   const [dataTransaction, setDataTransaction] = useState(false);
   const [report, setReport] = useState(false);
   return (
-    <div className="bg-cream h-screen">
+    <div className="bg-cream w-72">
       <h1>ADMIN</h1>
       <div className="h-20"></div>
       <div className="flex ml-1">
@@ -20,11 +18,10 @@ export default function SidebarAdmin() {
         <div className="w-5" />
         <p>Dashboard</p>
       </div>
-      <div className="h-6" />
       <div className="bg-transparant w-full">
         <div className="h-6" />
         <button
-          className="group relative flex items-center"
+          className="group relative flex items-center w-full"
           type="button"
           onClick={() => setDataMaster(!dataMaster)}
           aria-expanded="true"
@@ -33,6 +30,7 @@ export default function SidebarAdmin() {
           <img src={icData} alt="" width={24} />
           <div className="w-4" />
           Data Master
+          <div className="grow" />
           <span
             className={`${
               dataMaster ? `rotate-[-180deg] -mr-1` : `rotate-0`
@@ -70,7 +68,7 @@ export default function SidebarAdmin() {
       <div className="bg-transparant w-full">
         <h2>
           <button
-            className="group relative flex items-center"
+            className="group relative flex items-center w-full"
             type="button"
             onClick={() => setDataTransaction(!dataTransaction)}
             aria-expanded="true"
@@ -79,6 +77,7 @@ export default function SidebarAdmin() {
             <img src={icDataTransaction} alt="" width={24} />
             <div className="w-4" />
             Data Transaksi
+            <div className="grow" />
             <span
               className={`${
                 dataTransaction ? `rotate-[-180deg] -mr-1` : `rotate-0`
@@ -114,7 +113,7 @@ export default function SidebarAdmin() {
       <div className="bg-transparant w-full">
         <h2>
           <button
-            className="group relative flex items-center"
+            className="group relative flex items-center w-full"
             type="button"
             onClick={() => setReport(!report)}
             aria-expanded="true"
@@ -123,7 +122,7 @@ export default function SidebarAdmin() {
             <img src={icReport} alt="" width={24} />
             <div className="w-4" />
             Laporan
-            <div className="w-4" />
+            <div className="grow" />
             <span
               className={`${
                 report ? `rotate-[-180deg] -mr-1` : `rotate-0`
