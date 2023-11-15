@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../../components/navbar_customer";
+import Navbar from "../../layouts/navbar_customer";
 import bgHome from "../../assets/images/bg_home.png";
 import { useState } from "react";
 
@@ -12,7 +12,9 @@ const EditCustomerPage = () => {
   const [usernameCustomer, setUsernameCustomer] = useState("");
   const [emailCustomer, setEmailCustomer] = useState("");
 
-  const tapEdit = async (e) => {
+  const tapEdit = async (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
     e.preventDefault();
     try {
       // await axios.get("http://localhost:8080/api/user", {

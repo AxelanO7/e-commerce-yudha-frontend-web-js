@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../../components/navbar_customer";
+import Navbar from "../../layouts/navbar_customer";
 
 import bgHome from "../../assets/images/bg_home.png";
 

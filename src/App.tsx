@@ -1,18 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import MainPage from "./pages/MainPage";
-import LogiAdminPage from "./pages/admin/LoginAdminPage";
-import LoginPage from "./pages/customer/LoginPage";
-import RegisterPage from "./pages/customer/RegisterPage";
-import HomePage from "./pages/customer/HomePage";
-import EditCustomerPage from "./pages/customer/EditCustomer";
-import UserPage from "./pages/admin/UserPage";
-import CustomerPage from "./pages/admin/CustomerPage";
+import LogiAdminPage from "./pages/admin/Login_admin_page";
+import LoginPage from "./pages/customer/login_page";
+import RegisterPage from "./pages/customer/register_page";
+import HomePage from "./pages/customer/home_page";
+import EditCustomerPage from "./pages/customer/edit_customer";
+import UserPage from "./pages/admin/user_page";
+import CustomerPage from "./pages/admin/customer_page";
+import React from "react";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<CustomerPage />} />
+        <Route path="/" element={<UserPage />} />
         <Route path="login" element={<LoginPage />} />
         <Route path="login-admin" element={<LogiAdminPage />} />
         <Route path="register" element={<RegisterPage />} />

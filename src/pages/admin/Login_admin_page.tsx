@@ -6,16 +6,31 @@ const LoginAdminPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const tapLogin = async (e) => {
+  // const tapLogin = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     await axios.get("http://localhost:8080/api/user", {
+  //       // await axios.post("http://localhost:8080/admin/login", {
+  //       //   username,
+  //       //   password,
+  //       // });
+  //       // navigate("/admin-page");
+  //     });
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+  const tapLogin = async (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
     e.preventDefault();
     try {
-      await axios.get("http://localhost:8080/api/user", {
-        // await axios.post("http://localhost:8080/admin/login", {
-        //   username,
-        //   password,
-        // });
-        // navigate("/admin-page");
+      await axios.post("http://localhost:8080/admin/login", {
+        username,
+        password,
       });
+      // navigate("/admin-page");
     } catch (error) {
       console.log(error);
     }
@@ -23,7 +38,7 @@ const LoginAdminPage = () => {
 
   return (
     <section>
-      <div class="flex h-screen w-full items-center justify-center bg-cream bg-cover bg-no-repeat min-h-screen flex-col text-center static">
+      <div className="flex h-screen w-full items-center justify-center bg-cream bg-cover bg-no-repeat min-h-screen flex-col text-center static">
         <img src={logoImage} className="absolute h-96" alt="logo" />
         <div className="z-[1]">
           <h1 className="text-4xl text-brown">LOGIN</h1>

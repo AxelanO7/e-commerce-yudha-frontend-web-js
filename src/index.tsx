@@ -5,8 +5,7 @@ import App from "./App";
 
 import "tw-elements-react/dist/css/tw-elements-react.min.css";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>

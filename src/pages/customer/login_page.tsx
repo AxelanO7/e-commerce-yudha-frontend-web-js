@@ -6,7 +6,9 @@ const LoginPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const tapLogin = async (e) => {
+  const tapLogin = async (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
     e.preventDefault();
     try {
       await axios.get("http://localhost:8080/api/user", {
@@ -23,7 +25,7 @@ const LoginPage = () => {
 
   return (
     <section>
-      <div class="flex h-screen w-full items-center justify-center bg-cream bg-cover bg-no-repeat min-h-screen flex-col text-center static">
+      <div className="flex h-screen w-full items-center justify-center bg-cream bg-cover bg-no-repeat min-h-screen flex-col text-center static">
         <img src={logoImage} className="absolute h-96" alt="logo" />
         <h1 className="text-4xl text-brown">LOGIN</h1>
         <div className="h-16" />

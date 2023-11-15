@@ -11,7 +11,9 @@ const RegisterPage = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const tapRegister = async (e) => {
+  const tapRegister = async (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
     e.preventDefault();
     try {
       await axios.get("http://localhost:8080/api/user", {
@@ -28,7 +30,7 @@ const RegisterPage = () => {
 
   return (
     <section>
-      <div class="flex w-full items-center justify-center bg-cream bg-cover bg-no-repeat flex-col py-12 min-h-screen static">
+      <div className="flex w-full items-center justify-center bg-cream bg-cover bg-no-repeat flex-col py-12 min-h-screen static">
         <img src={logoImage} className="absolute h-full" alt="logo" />
         <h1 className="text-4xl text-yellow-950">REGISTER</h1>
         <div className="h-16" />
